@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="volume">Volume Conversion - Metric Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 data-key="title">Metric Conversion</h1>
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+    <div class="navbar">
+        <a href="index.html" data-key="home">Home</a>
+        <a href="temperature.html" data-key="temperature">Temperature</a>
+        <a href="length.html" data-key="length">Length</a>
+        <a href="weight.html" data-key="weight">Weight</a>
+        <a href="volume.html" data-key="volume">Volume</a>
+        <a href="area.html" data-key="area">Area</a>
+        <a href="speed.html" data-key="speed">Speed</a>
+    </div>
+
+    <div class="container">
+        <div class="main">
+            <h2 data-key="volume_converter">Volume Converter</h2>
+            <div class="converter">
+                <input type="number" id="inputVolume" placeholder="Enter value" oninput="convertVolume()">
+                <span>=</span>
+                <input type="number" id="outputVolume" placeholder="Result" oninput="convertVolume(true)">
+                <br>
+                <select id="volumeUnit" onchange="convertVolume()">
+                    <option value="lToGal">Liters to Gallons</option>
+                    <option value="galToL">Gallons to Liters</option>
+                    <option value="lToMl">Liters to Milliliters</option>
+                    <option value="mlToL">Milliliters to Liters</option>
+                    <option value="m3ToL">Cubic Meters to Liters</option>
+                    <option value="lToM3">Liters to Cubic Meters</option>
+                    <option value="galToMl">Gallons to Milliliters</option>
+                    <option value="mlToGal">Milliliters to Gallons</option>
+                    <option value="m3ToGal">Cubic Meters to Gallons</option>
+                    <option value="galToM3">Gallons to Cubic Meters</option>
+                </select>
+            </div>
+            <div class="ads" data-key="ad_space">Ad Space (Insert Google AdSense here)</div>
+        </div>
+
+        <div class="sidebar">
+            <h2 data-key="volume_formulas">Volume Conversion Formulas</h2>
+            <table>
+                <tr><th data-key="conversion">Conversion</th><th data-key="formula">Formula</th></tr>
+                <tr><td>Liters to Gallons</td><td>gal = L × 0.264172</td></tr>
+                <tr><td>Gallons to Liters</td><td>L = gal ÷ 0.264172</td></tr>
+                <tr><td>Liters to Milliliters</td><td>mL = L × 1000</td></tr>
+                <tr><td>Milliliters to Liters</td><td>L = mL ÷ 1000</td></tr>
+                <tr><td>Cubic Meters to Liters</td><td>L = m³ × 1000</td></tr>
+                <tr><td>Liters to Cubic Meters</td><td>m³ = L ÷ 1000</td></tr>
+                <tr><td>Gallons to Milliliters</td><td>mL = gal × 3785.41</td></tr>
+                <tr><td>Milliliters to Gallons</td><td>gal = mL ÷ 3785.41</td></tr>
+                <tr><td>Cubic Meters to Gallons</td><td>gal = m³ × 264.172</td></tr>
+                <tr><td>Gallons to Cubic Meters</td><td>m³ = gal ÷ 264.172</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer" data-key="footer">© 2025 Metric Conversion - All rights reserved</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

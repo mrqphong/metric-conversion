@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="speed">Speed Conversion - Metric Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 data-key="title">Metric Conversion</h1>
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+    <div class="navbar">
+        <a href="index.html" data-key="home">Home</a>
+        <a href="temperature.html" data-key="temperature">Temperature</a>
+        <a href="length.html" data-key="length">Length</a>
+        <a href="weight.html" data-key="weight">Weight</a>
+        <a href="volume.html" data-key="volume">Volume</a>
+        <a href="area.html" data-key="area">Area</a>
+        <a href="speed.html" data-key="speed">Speed</a>
+    </div>
+
+    <div class="container">
+        <div class="main">
+            <h2 data-key="speed_converter">Speed Converter</h2>
+            <div class="converter">
+                <input type="number" id="inputSpeed" placeholder="Enter value" oninput="convertSpeed()">
+                <span>=</span>
+                <input type="number" id="outputSpeed" placeholder="Result" oninput="convertSpeed(true)">
+                <br>
+                <select id="speedUnit" onchange="convertSpeed()">
+                    <option value="kmhToMph">Kilometers/Hour to Miles/Hour</option>
+                    <option value="mphToKmh">Miles/Hour to Kilometers/Hour</option>
+                    <option value="kmhToMs">Kilometers/Hour to Meters/Second</option>
+                    <option value="msToKmh">Meters/Second to Kilometers/Hour</option>
+                    <option value="mphToMs">Miles/Hour to Meters/Second</option>
+                    <option value="msToMph">Meters/Second to Miles/Hour</option>
+                    <option value="kmhToKnot">Kilometers/Hour to Knots</option>
+                    <option value="knotToKmh">Knots to Kilometers/Hour</option>
+                    <option value="mphToKnot">Miles/Hour to Knots</option>
+                    <option value="knotToMph">Knots to Miles/Hour</option>
+                </select>
+            </div>
+            <div class="ads" data-key="ad_space">Ad Space (Insert Google AdSense here)</div>
+        </div>
+
+        <div class="sidebar">
+            <h2 data-key="speed_formulas">Speed Conversion Formulas</h2>
+            <table>
+                <tr><th data-key="conversion">Conversion</th><th data-key="formula">Formula</th></tr>
+                <tr><td>Kilometers/Hour to Miles/Hour</td><td>mph = km/h × 0.621371</td></tr>
+                <tr><td>Miles/Hour to Kilometers/Hour</td><td>km/h = mph ÷ 0.621371</td></tr>
+                <tr><td>Kilometers/Hour to Meters/Second</td><td>m/s = km/h ÷ 3.6</td></tr>
+                <tr><td>Meters/Second to Kilometers/Hour</td><td>km/h = m/s × 3.6</td></tr>
+                <tr><td>Miles/Hour to Meters/Second</td><td>m/s = mph × 0.44704</td></tr>
+                <tr><td>Meters/Second to Miles/Hour</td><td>mph = m/s ÷ 0.44704</td></tr>
+                <tr><td>Kilometers/Hour to Knots</td><td>knots = km/h × 0.539957</td></tr>
+                <tr><td>Knots to Kilometers/Hour</td><td>km/h = knots ÷ 0.539957</td></tr>
+                <tr><td>Miles/Hour to Knots</td><td>knots = mph × 0.868976</td></tr>
+                <tr><td>Knots to Miles/Hour</td><td>mph = knots ÷ 0.868976</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer" data-key="footer">© 2025 Metric Conversion - All rights reserved</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

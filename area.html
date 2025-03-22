@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="area">Area Conversion - Metric Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 data-key="title">Metric Conversion</h1>
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+    <div class="navbar">
+        <a href="index.html" data-key="home">Home</a>
+        <a href="temperature.html" data-key="temperature">Temperature</a>
+        <a href="length.html" data-key="length">Length</a>
+        <a href="weight.html" data-key="weight">Weight</a>
+        <a href="volume.html" data-key="volume">Volume</a>
+        <a href="area.html" data-key="area">Area</a>
+        <a href="speed.html" data-key="speed">Speed</a>
+    </div>
+
+    <div class="container">
+        <div class="main">
+            <h2 data-key="area_converter">Area Converter</h2>
+            <div class="converter">
+                <input type="number" id="inputArea" placeholder="Enter value" oninput="convertArea()">
+                <span>=</span>
+                <input type="number" id="outputArea" placeholder="Result" oninput="convertArea(true)">
+                <br>
+                <select id="areaUnit" onchange="convertArea()">
+                    <option value="m2ToFt2">Square Meters to Square Feet</option>
+                    <option value="ft2ToM2">Square Feet to Square Meters</option>
+                    <option value="m2ToAcre">Square Meters to Acres</option>
+                    <option value="acreToM2">Acres to Square Meters</option>
+                    <option value="haToAcre">Hectares to Acres</option>
+                    <option value="acreToHa">Acres to Hectares</option>
+                    <option value="m2ToHa">Square Meters to Hectares</option>
+                    <option value="haToM2">Hectares to Square Meters</option>
+                    <option value="ft2ToAcre">Square Feet to Acres</option>
+                    <option value="acreToFt2">Acres to Square Feet</option>
+                </select>
+            </div>
+            <div class="ads" data-key="ad_space">Ad Space (Insert Google AdSense here)</div>
+        </div>
+
+        <div class="sidebar">
+            <h2 data-key="area_formulas">Area Conversion Formulas</h2>
+            <table>
+                <tr><th data-key="conversion">Conversion</th><th data-key="formula">Formula</th></tr>
+                <tr><td>Square Meters to Square Feet</td><td>ft² = m² × 10.7639</td></tr>
+                <tr><td>Square Feet to Square Meters</td><td>m² = ft² ÷ 10.7639</td></tr>
+                <tr><td>Square Meters to Acres</td><td>acres = m² ÷ 4046.86</td></tr>
+                <tr><td>Acres to Square Meters</td><td>m² = acres × 4046.86</td></tr>
+                <tr><td>Hectares to Acres</td><td>acres = ha × 2.47105</td></tr>
+                <tr><td>Acres to Hectares</td><td>ha = acres ÷ 2.47105</td></tr>
+                <tr><td>Square Meters to Hectares</td><td>ha = m² ÷ 10000</td></tr>
+                <tr><td>Hectares to Square Meters</td><td>m² = ha × 10000</td></tr>
+                <tr><td>Square Feet to Acres</td><td>acres = ft² ÷ 43560</td></tr>
+                <tr><td>Acres to Square Feet</td><td>ft² = acres × 43560</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer" data-key="footer">© 2025 Metric Conversion - All rights reserved</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

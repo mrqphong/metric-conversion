@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="length">Length Conversion - Metric Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 data-key="title">Metric Conversion</h1>
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+    <div class="navbar">
+        <a href="index.html" data-key="home">Home</a>
+        <a href="temperature.html" data-key="temperature">Temperature</a>
+        <a href="length.html" data-key="length">Length</a>
+        <a href="weight.html" data-key="weight">Weight</a>
+        <a href="volume.html" data-key="volume">Volume</a>
+        <a href="area.html" data-key="area">Area</a>
+        <a href="speed.html" data-key="speed">Speed</a>
+    </div>
+
+    <div class="container">
+        <div class="main">
+            <h2 data-key="length_converter">Length Converter</h2>
+            <div class="converter">
+                <input type="number" id="inputLength" placeholder="Enter value" oninput="convertLength()">
+                <span>=</span>
+                <input type="number" id="outputLength" placeholder="Result" oninput="convertLength(true)">
+                <br>
+                <select id="lengthUnit" onchange="convertLength()">
+                    <option value="kmToMile">Kilometers to Miles</option>
+                    <option value="mileToKm">Miles to Kilometers</option>
+                    <option value="mToFt">Meters to Feet</option>
+                    <option value="ftToM">Feet to Meters</option>
+                    <option value="mToIn">Meters to Inches</option>
+                    <option value="inToM">Inches to Meters</option>
+                    <option value="cmToIn">Centimeters to Inches</option>
+                    <option value="inToCm">Inches to Centimeters</option>
+                    <option value="kmToM">Kilometers to Meters</option>
+                    <option value="mToKm">Meters to Kilometers</option>
+                </select>
+            </div>
+            <div class="ads" data-key="ad_space">Ad Space (Insert Google AdSense here)</div>
+        </div>
+
+        <div class="sidebar">
+            <h2 data-key="length_formulas">Length Conversion Formulas</h2>
+            <table>
+                <tr><th data-key="conversion">Conversion</th><th data-key="formula">Formula</th></tr>
+                <tr><td>Kilometers to Miles</td><td>miles = km × 0.621371</td></tr>
+                <tr><td>Miles to Kilometers</td><td>km = miles ÷ 0.621371</td></tr>
+                <tr><td>Meters to Feet</td><td>ft = m × 3.28084</td></tr>
+                <tr><td>Feet to Meters</td><td>m = ft ÷ 3.28084</td></tr>
+                <tr><td>Meters to Inches</td><td>in = m × 39.3701</td></tr>
+                <tr><td>Inches to Meters</td><td>m = in ÷ 39.3701</td></tr>
+                <tr><td>Centimeters to Inches</td><td>in = cm ÷ 2.54</td></tr>
+                <tr><td>Inches to Centimeters</td><td>cm = in × 2.54</td></tr>
+                <tr><td>Kilometers to Meters</td><td>m = km × 1000</td></tr>
+                <tr><td>Meters to Kilometers</td><td>km = m ÷ 1000</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer" data-key="footer">© 2025 Metric Conversion - All rights reserved</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

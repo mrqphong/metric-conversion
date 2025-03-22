@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="weight">Weight Conversion - Metric Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 data-key="title">Metric Conversion</h1>
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+    <div class="navbar">
+        <a href="index.html" data-key="home">Home</a>
+        <a href="temperature.html" data-key="temperature">Temperature</a>
+        <a href="length.html" data-key="length">Length</a>
+        <a href="weight.html" data-key="weight">Weight</a>
+        <a href="volume.html" data-key="volume">Volume</a>
+        <a href="area.html" data-key="area">Area</a>
+        <a href="speed.html" data-key="speed">Speed</a>
+    </div>
+
+    <div class="container">
+        <div class="main">
+            <h2 data-key="weight_converter">Weight Converter</h2>
+            <div class="converter">
+                <input type="number" id="inputWeight" placeholder="Enter value" oninput="convertWeight()">
+                <span>=</span>
+                <input type="number" id="outputWeight" placeholder="Result" oninput="convertWeight(true)">
+                <br>
+                <select id="weightUnit" onchange="convertWeight()">
+                    <option value="kgToLb">Kilograms to Pounds</option>
+                    <option value="lbToKg">Pounds to Kilograms</option>
+                    <option value="kgToOz">Kilograms to Ounces</option>
+                    <option value="ozToKg">Ounces to Kilograms</option>
+                    <option value="gToOz">Grams to Ounces</option>
+                    <option value="ozToG">Ounces to Grams</option>
+                    <option value="kgToG">Kilograms to Grams</option>
+                    <option value="gToKg">Grams to Kilograms</option>
+                    <option value="lbToOz">Pounds to Ounces</option>
+                    <option value="ozToLb">Ounces to Pounds</option>
+                </select>
+            </div>
+            <div class="ads" data-key="ad_space">Ad Space (Insert Google AdSense here)</div>
+        </div>
+
+        <div class="sidebar">
+            <h2 data-key="weight_formulas">Weight Conversion Formulas</h2>
+            <table>
+                <tr><th data-key="conversion">Conversion</th><th data-key="formula">Formula</th></tr>
+                <tr><td>Kilograms to Pounds</td><td>lb = kg × 2.20462</td></tr>
+                <tr><td>Pounds to Kilograms</td><td>kg = lb ÷ 2.20462</td></tr>
+                <tr><td>Kilograms to Ounces</td><td>oz = kg × 35.27396</td></tr>
+                <tr><td>Ounces to Kilograms</td><td>kg = oz ÷ 35.27396</td></tr>
+                <tr><td>Grams to Ounces</td><td>oz = g ÷ 28.34952</td></tr>
+                <tr><td>Ounces to Grams</td><td>g = oz × 28.34952</td></tr>
+                <tr><td>Kilograms to Grams</td><td>g = kg × 1000</td></tr>
+                <tr><td>Grams to Kilograms</td><td>kg = g ÷ 1000</td></tr>
+                <tr><td>Pounds to Ounces</td><td>oz = lb × 16</td></tr>
+                <tr><td>Ounces to Pounds</td><td>lb = oz ÷ 16</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer" data-key="footer">© 2025 Metric Conversion - All rights reserved</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
